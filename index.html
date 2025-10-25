@@ -1,22 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search Users</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
-</head>
+    <title>Reminder Card</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-<body>
-    <div class="flex flex-col gap-10 items-center">
-        <input class="inp px-5 py-5 rounded outline-none bg-[#111] text-[#888]" type="text" placeholder="Search...">
-        <div class="cards flex gap-10">
+  <body>
+    <!-- Profile Card -->
+    <div class="card">
+      <div class="left-buttons">
+        <button id="add-note" class="btn add">
+          <i class="ri-add-line"></i>
+        </button>
+        <button class="btn up"><i class="ri-arrow-up-line"></i></button>
+        <button class="btn down"><i class="ri-arrow-down-line"></i></button>
+      </div>
 
+      <div class="profile">
+        <img
+          src="https://via.placeholder.com/80"
+          alt="Profile"
+          class="profile-pic"
+        />
+        <h2 class="username">John Doe</h2>
+        <p class="location">New York, USA</p>
+      </div>
+
+      <div class="right-dots">
+        <span class="dot red"></span>
+        <span class="dot green"></span>
+        <span class="dot blue"></span>
+      </div>
+    </div>
+
+    <!-- Hidden Form -->
+    <div class="form-container">
+      <form>
+        <h2>Add New Call</h2>
+
+        <label>Image Url</label>
+        <input required type="text" name="imageUrl" placeholder="https://photo.com/img.jpg" />
+
+        <label>Full Name</label>
+        <input required type="text" name="fullName" placeholder="Enter Full name" />
+
+        <label>Home Town</label>
+        <input required type="text"  name="homeTown" placeholder="Enter Home Town" />
+
+        <label>Purpose</label>
+        <input required type="text" name="purpose" placeholder="Purpose" />
+
+        <label>Category</label>
+        <div>
+          <label class="tag-checkbox">
+            <input required type="radio" name="category" value="family" />
+            <span>family</span>
+          </label>
+          <label class="tag-checkbox">
+            <input required type="radio" name="category" value="emergency" />
+            <span>emergency</span>
+          </label>
+          <label class="tag-checkbox">
+            <input required type="radio" name="category" value="office" />
+            <span>office</span>
+          </label>
         </div>
-    </div>  
-    <script src="script.js"></script>
-</body>
 
+        <button type="submit">Add</button>
+      </form>
+
+      <button class="closeForm">Close</button>
+    </div>
+
+    <script src="script.js">
+      
+    </script>
+  </body>
 </html>
